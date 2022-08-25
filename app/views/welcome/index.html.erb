@@ -1,6 +1,15 @@
 <p>O Idioma da aplicação é: <%= I18n.t("current_language")%> </p>
 
+<p>
+    <%= link_to "Português", root_path(locale: "pt-BR")%>
+</p>
+<p>
+    <%= link_to "Inglês", "/?locale=en" %>
+</p>
+
 <%= I18n.t("ola") %>
+
+<p><%= cookies[:curso] %> Pegando cookies</p>
 
 <p> <%#= data_Br %> <%= I18n.l(Date.today)%> </p>
 
