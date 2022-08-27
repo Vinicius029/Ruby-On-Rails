@@ -1,5 +1,9 @@
 body {
-  background-color: #fff;
+  background-color: <%= Rails.env.development? ? 'write' : 'blue'%>;
+  background-image: asset-url("Corinthians.png");
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: 400px;
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;

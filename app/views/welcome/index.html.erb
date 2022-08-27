@@ -1,6 +1,6 @@
 <p>O Idioma da aplicação é: <%= I18n.t("current_language")%> </p>
 
-<p>
+<p id="portugues">
     <%= link_to "Português", root_path(locale: "pt-BR")%>
 </p>
 <p>
@@ -20,4 +20,6 @@
 <p>Você está em ambiente de: <%= ambiente %></p>
 
 <p>Nome: <%= @nome %> Meu curso é <%= @curso %></p>
+
+
 
