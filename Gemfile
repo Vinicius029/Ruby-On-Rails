@@ -13,10 +13,7 @@ gem 'pry', '~> 0.14.1'
 
 gem 'rails-i18n', '~> 5.1'
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-jquery'
-  gem 'rails-assets-notifyjs'
-end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
