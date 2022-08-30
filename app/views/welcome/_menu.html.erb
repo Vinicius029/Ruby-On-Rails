@@ -1,7 +1,8 @@
 
 <div>
-    <a class="btn btn-primary" href="/coins" role="button">Cadastro de Moedas</a>
-     <%= link_to "Cadastro de Tipo de Mineração", mining_types_path,  class:"btn btn-primary" %>
+    
+    <%= link_to "#{Coin.model_name.human}", coins_path,  class:"btn btn-primary" %>
+    <%= link_to "#{MiningType.model_name.human}", mining_types_path,  class:"btn btn-primary" %>
 </div>
 
 

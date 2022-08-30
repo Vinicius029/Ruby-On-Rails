@@ -30,9 +30,28 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  current_language: "Inglês"
-  hello: "Hello world"
+  messages:
+    hello: "Hello world"
+    welcome: "Welcome!"
+    current_language: "Inglês"
+
+  register: "Register"
+
   links:
     edit: "Edit"
     show: "Show"
     delete: "Delete"
+    new: "New"
+    back: "Back"
+
+  new:
+    coin: "New Coin"
+    mining_type: "New Type of Mining"
+
+  editing:
+    coin: "Editing Currency Type"
+    mining_type: "Editing Mining Type"
+
+  showing:
+    coin: "Showing Coins"
+    mining_type: "Showing Mining Type"

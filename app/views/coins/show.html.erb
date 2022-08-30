@@ -1,19 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @coin.description %>
-</p>
+<h1><%= I18n.t("showing.coin") %></h1>
 
-<p>
-  <strong>Acronym:</strong>
-  <%= @coin.acronym %>
-</p>
+<form>
+  <div class="form-group">
+    <%= label_tag @coin.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @coin.description, class:"form-control", disabled: true %>
+  </div>
+  <div class="form-group">
+    <%= label_tag @coin.class.human_attribute_name(:acronym) %>
+    <%= text_field_tag nil, @coin.acronym, class:"form-control", disabled: true %>
+  </div>
+  <div class="form-group">
+    <%= label_tag @coin.class.human_attribute_name(:url_image) %>
+    <%= text_field_tag nil, @coin.url_image, class:"form-control", disabled: true %>
+   
+  </div>
+</form>
 
-<p>
-  <strong>Url image:</strong>
-  <%= image_tag @coin.url_image, size: "25x25" %>
-</p>
+<br>
 
-<%= link_to 'Edit', edit_coin_path(@coin) %> |
-<%= link_to 'Back', coins_path %>
+<%= link_to 'Edit', edit_coin_path(@coin), class:"btn btn-primary" %> 
+<%= link_to I18n.t("links.back"), coins_path, class:"btn btn-primary" %>

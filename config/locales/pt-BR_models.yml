@@ -3,10 +3,10 @@
     models:
       coin: 
         one: Moeda
-        orther: Moedas
+        other: Moedas
       mining_type: 
         one: Tipo de Mineração
-        orther: Tipos de Mineração
+        other: Tipos de Mineração
     attributes:
       coin:
         id: Codígo

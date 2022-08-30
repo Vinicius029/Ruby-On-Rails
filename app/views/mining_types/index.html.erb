@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Mining Types</h1>
+<h1><%= MiningType.model_name.human(count: @mining_types.count) %>s</h1>
 
 <table class="table table-dark">
   <thead>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Mining Type', new_mining_type_path %>
+<%= link_to I18n.t("new.mining_type"), new_mining_type_path, class:"btn btn-primary" %>

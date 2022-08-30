@@ -1,7 +1,28 @@
 pt-BR:
-  current_language: "Português - Brasil"
-  ola: "Olá Mundo!"
+  
+  
+  register: "Cadastrar"
+  
+  messages:
+    hello: "Olá Mundo!"
+    welcome: "Seja Bem Vindo!"
+    current_language: "Português - Brasil"
+
   links:
     edit: "Editar"
     show: "Mostrar"
     delete: "Deletar"
+    new: "Novo"
+    back: "Voltar"
+
+  new:
+    coin: "Nova Moeda"
+    mining_type: "Novo tipo de Mineração"
+
+  editing:
+    coin: "Editando Tipo de Moeda"
+    mining_type: "Editando Tipo de Mineração"
+
+  showing:
+    coin: "Mostrando Moeda"
+    mining_type: "Mostrando  Tipo de Mineração"

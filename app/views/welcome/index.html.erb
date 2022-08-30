@@ -1,13 +1,16 @@
-<p>O Idioma da aplicação é: <%= I18n.t("current_language")%> </p>
+<p>O Idioma da aplicação é: <%= I18n.t("messages.current_language") %> </p>
 
-<%= I18n.t("ola") %>
+<h1><%= I18n.t("messages.welcome") %></h1>
+
+
+<h2><%= I18n.locale == "pt-BR" ? I18n.t("messages.hello") : I18n.t("messages.hello") %></h2>
 
 <p><%= cookies[:curso] %> Pegando cookies</p>
 
 <p> <%#= data_Br %> <%= I18n.l(Date.today)%> </p>
 
-
-<%= render "menu"%>
+<h3><%= t("register") %></h3>
+<%= render "menu"%> <br>
 
 
 <p>Você está em ambiente de: <%= ambiente %></p>
