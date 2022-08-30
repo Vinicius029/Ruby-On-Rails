@@ -7,6 +7,7 @@ pt-BR:
     hello: "Olá Mundo!"
     welcome: "Seja Bem Vindo!"
     current_language: "Português - Brasil"
+    msg_rails: "Aprendendo Ruby On Rails!"
 
   links:
     edit: "Editar"

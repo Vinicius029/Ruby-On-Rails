@@ -34,6 +34,7 @@ en:
     hello: "Hello world"
     welcome: "Welcome!"
     current_language: "Inglês"
+    msg_rails: "Learning Ruby On Rails!"
 
   register: "Register"
 

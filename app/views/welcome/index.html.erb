@@ -1,21 +1,28 @@
 <p>O Idioma da aplicação é: <%= I18n.t("messages.current_language") %> </p>
 
-<h1><%= I18n.t("messages.welcome") %></h1>
+<div class="jumbotron">
+  <h1 class="display-4"><%= I18n.t("messages.welcome") %></h1>
+  <p class="lead"><%= I18n.t("messages.msg_rails") %></p>
+  <hr class="my-4">
+  <h3><%= t("register") %></h3>
+  <%= render "menu"%> <br>
+  <hr class="my-4">
+
+  <p><%= cookies[:curso] %> Pegando cookies</p>
+
+  <p> <%#= data_Br %> <%= I18n.l(Date.today)%> </p>
+
+  <p>Você está em ambiente de: <%= ambiente %></p>
+
+  <p>Nome: <%= @nome %> Meu curso é <%= @curso %></p> 
+  <hr class="my-4">
+</div>
 
 
-<h2><%= I18n.locale == "pt-BR" ? I18n.t("messages.hello") : I18n.t("messages.hello") %></h2>
-
-<p><%= cookies[:curso] %> Pegando cookies</p>
-
-<p> <%#= data_Br %> <%= I18n.l(Date.today)%> </p>
-
-<h3><%= t("register") %></h3>
-<%= render "menu"%> <br>
 
 
-<p>Você está em ambiente de: <%= ambiente %></p>
 
-<p>Nome: <%= @nome %> Meu curso é <%= @curso %></p>
+
 
 
 
