@@ -2,11 +2,15 @@
 
 ## Repositório de estudo do Rails
 
-### Iniciando o Projeto
+### Para rodar o projeto
 
-* gem install ruby
-* gem install rails 
-* bundle install
+Pra isso precisa ter instalado ruby e ruby on rails
+
+1. `git clone https://github.com/Vinicius029/Ruby-On-Rails.git` para rodar o projeto
+2. `bundle install` dentro da pasta do projeto
+3. `rails server`
+4. Acessar [http://localhost:3000](http://localhost:3000) no navegador
+
 
 ### MVC
 * MVC: MODELS(DADOS), VIEWS(VISUALIZAÇÕES), CONTROLLERS(CONTROLES)
@@ -18,22 +22,30 @@
 * Scaffold: O rails possui um generator chamado scaffold que permite criar um CRUD para uma determinada "tabela", 
 crud é a criação de banco de dados, CREATE, READ, UPDATE, DELETE. Scaffold ele já gerar um campo pronto com com os atributos informados.
 
-* Comando para criar um crud: rails g scaffold Coin descricao:string sigla:string imagem:string
-     - rails db:migrate (migra os dados para o db)
+* Comando para criar um crud
+```rb
+   rails g scaffold Coin descricao:string sigla:string imagem:string
+``` 
+```rb
+    rails db:migrate (migra os dados para o db)
+```
 
 * ORM: Object-Relational-Mapping: é uma tecnica que mapeas os dados em db para classes. ela converte as classes/objetos em algo que o db enteda
 
 ### Tasks
-
-* rails db:create CRIA DB
-* rails db:drop DELETA
-* rails db:migrate MIGRA
-* rails db:rollback DESFAZ ULTIMA MIGRAÇÃO
+```rb
+     rails db:create (CRIA DB)
+     rails db:drop (DELETA)
+     rails db:migrate (MIGRA)
+     rails db:rollback (DESFAZ ULTIMA MIGRAÇÃO)
+```
 
 ### Criando Controllers
 
-* rails g controller teste: criar generator controller
-* rails d controller teste: excluí o controllers
+```rb
+     rails g controller teste (criar generator controller)
+     rails d controller teste (excluí o controllers)
+```
 
     - app/views/teste.html.erb: view do controller teste
 
@@ -64,22 +76,30 @@ end
 
 * Deixa você interagir com aplicação atraves da linha de comando, utilizando: rails console ou rails c.
 
-    - c = Coin.new
-    - c.descricption = "real"
-    - c.sigla = "R$"
-    - c.url = "https//.."
-    - c.save! 
+```rb
+     c = Coin.new
+     c.descricption = "real"
+     c.sigla = "R$"
+     c.url = "https//.."
+     c.save!
+```
 
 ###  Query Params Para Requests
 
 * app/controllers/(arquivo) 
-    - def index
+```rb
+    def index
         @nome = params[:nome]
         @curso = params[:curso]
     end
+```
 
 app/views/index
-<p>Nome: <%= @nome %> Meu curso é <%= @curso %></p>(Mostra os elementos dos parametros) 
+
+```rb
+    <p>Nome: <%= @nome %> Meu curso é <%= @curso %></p>(Mostra os elementos dos parametros) 
+```
+
 
 * localhost:3000/?nome=Vinicius&curso=Rails (set nos nos atributos pela url)
 
@@ -95,7 +115,9 @@ app/views/index
 * app/views/welcome(no arquivo menu.html)
 * sempre tem que criar o arquivo com "_" _menu.html.erb
 
+```rb
  <a href="/coins"> Cadastro de Moedas </a>
+```
 
 
 ### LAYOUT
@@ -105,16 +127,21 @@ ela é html da pagina toda, podemos colocar coisas que apareceram em todas as pa
 as paginas terá cabeçalho.
 
 * app/views/layout/application.html.erb
+
     - Cabeçalho terá em toda páginas 
+```rb
     <h3>Cabeçalho Application</h3>
     <%= yield %> (yield é o conteúdo todo da pagina)
     <br>
+```
 
 * app/views/layout/adm.html.erb
 
   - Cabeçalho apenas do coin.html.erb
+```rb
     <h3>Cabeçalho Adm</h1> 
     <%= yield %> 
+```
 
 * em app/controllers/coins_controller.erb
 
